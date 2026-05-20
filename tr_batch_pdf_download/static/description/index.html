@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+        .hero { background: linear-gradient(135deg, #1a1a5e 0%, #6c3fc5 100%);
+                color: #fff; padding: 48px 40px; text-align: center; }
+        .hero h1 { font-size: 32px; font-weight: 900; margin-bottom: 10px; }
+        .hero p  { font-size: 16px; opacity: 0.85; max-width: 620px; margin: 0 auto 16px; }
+        .hero .tagline { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.6; }
+        .badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+        .badge  { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+                  color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 12px; }
+        .section { padding: 40px; max-width: 960px; margin: 0 auto; }
+        h2 { color: #1a1a5e; font-size: 22px; margin-bottom: 20px;
+             border-bottom: 3px solid #6c3fc5; padding-bottom: 8px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px; }
+        .feature-card { background: #f8f9ff; border-left: 4px solid #1a1a5e; padding: 14px 16px; border-radius: 4px; }
+        .feature-card .icon { font-size: 22px; margin-bottom: 6px; }
+        .feature-card h3 { font-size: 13px; color: #1a1a5e; margin-bottom: 4px; }
+        .feature-card p  { font-size: 12px; color: #666; }
+        .step { display: flex; gap: 20px; margin-bottom: 24px; align-items: flex-start; }
+        .step-num { background: linear-gradient(135deg,#1a1a5e,#6c3fc5); color:#fff; width:36px; height:36px;
+                    border-radius:50%; display:flex; align-items:center; justify-content:center;
+                    font-weight:800; font-size:16px; flex-shrink:0; }
+        .step-content h3 { color:#1a1a5e; margin-bottom:6px; font-size:15px; }
+        .step-content p,.step-content li { font-size:13px; color:#555; }
+        .step-content ul { padding-left:18px; margin-top:4px; }
+        .support-table { width:100%; border-collapse:collapse; margin-top:16px; }
+        .support-table th { background:#1a1a5e; color:#fff; padding:10px 14px; text-align:left; font-size:13px; }
+        .support-table td { padding:10px 14px; border-bottom:1px solid #eee; font-size:13px; }
+        .support-table tr:nth-child(even) td { background:#f8f9ff; }
+        .screenshot-section { padding:40px; background:#f0f0f0; }
+        .screenshot-section h2 { color:#1a1a5e; font-size:22px; margin-bottom:24px;
+                                  border-bottom:3px solid #6c3fc5; padding-bottom:8px;
+                                  max-width:960px; margin-left:auto; margin-right:auto; }
+        .screenshot-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(440px,1fr));
+                           gap:20px; max-width:960px; margin:0 auto; }
+        .screenshot-card { background:#fff; border-radius:8px; overflow:hidden;
+                           box-shadow:0 2px 12px rgba(0,0,0,0.1); }
+        .screenshot-card img { width:100%; display:block; border-bottom:1px solid #eee; }
+        .screenshot-card .caption { padding:10px 14px; font-size:13px; font-weight:600; color:#1a1a5e; }
+        .cta { text-align:center; padding:40px; background:#f8f9ff; }
+        .cta h2 { color:#1a1a5e; border:none; margin-bottom:10px; }
+        .cta a  { background:linear-gradient(135deg,#1a1a5e,#6c3fc5); color:#fff;
+                  padding:12px 28px; border-radius:6px; text-decoration:none; font-weight:700; display:inline-block; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Batch PDF Download</h1>
+    <p>Select multiple Invoices, Sale Orders, Purchase Orders or Delivery Orders — download all PDFs as a single ZIP file in one click.</p>
+    <div class="tagline">by Technical Rajni · Solutions | Automation | Innovation</div>
+    <div class="badges">
+        <span class="badge">Odoo 19</span>
+        <span class="badge">Community &amp; Enterprise</span>
+        <span class="badge">ZIP Download</span>
+        <span class="badge">Bulk PDFs</span>
+        <span class="badge">4 Document Types</span>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Key Features</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">🗜️</div>
+            <h3>Download as ZIP</h3>
+            <p>All selected PDFs packaged into one ZIP file — one click, one download.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🧾</div>
+            <h3>Invoices &amp; Bills</h3>
+            <p>Select multiple customer invoices or vendor bills and download all at once.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🛒</div>
+            <h3>Sale Orders</h3>
+            <p>Batch download Sale Order PDFs directly from the Sales list view.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🏭</div>
+            <h3>Purchase Orders</h3>
+            <p>Download multiple Purchase Order PDFs in one ZIP from Purchase list view.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🚚</div>
+            <h3>Delivery Orders</h3>
+            <p>Batch download delivery slips for all selected transfers from Inventory.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📁</div>
+            <h3>Auto-Named Files</h3>
+            <p>Each PDF is auto-named: <strong>INV_2026_0001.pdf</strong>, <strong>SO_0001.pdf</strong> etc.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Supported Documents -->
+<div class="section" style="background:#f8f9ff; max-width:100%; padding:40px;">
+    <div style="max-width:960px; margin:0 auto;">
+        <h2>Supported Documents</h2>
+        <table class="support-table">
+            <tr>
+                <th>Document</th>
+                <th>Where to Find</th>
+                <th>Action Name</th>
+                <th>ZIP File Name</th>
+            </tr>
+            <tr>
+                <td><strong>Invoice / Credit Note</strong></td>
+                <td>Accounting → Invoices</td>
+                <td>Download PDFs as ZIP</td>
+                <td>batch_download_account_move.zip</td>
+            </tr>
+            <tr>
+                <td><strong>Sale Order</strong></td>
+                <td>Sales → Orders</td>
+                <td>Download PDFs as ZIP</td>
+                <td>batch_download_sale_order.zip</td>
+            </tr>
+            <tr>
+                <td><strong>Purchase Order</strong></td>
+                <td>Purchase → Orders</td>
+                <td>Download PDFs as ZIP</td>
+                <td>batch_download_purchase_order.zip</td>
+            </tr>
+            <tr>
+                <td><strong>Delivery / Transfer</strong></td>
+                <td>Inventory → Transfers</td>
+                <td>Download PDFs as ZIP</td>
+                <td>batch_download_stock_picking.zip</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Screenshots -->
+<div class="screenshot-section">
+    <h2>Screenshots</h2>
+    <div class="screenshot-grid">
+        <div class="screenshot-card">
+            <img src="screen1_list.png" alt="List View Action"/>
+            <div class="caption">☑️ Select records from list → Action → Download PDFs as ZIP</div>
+        </div>
+        <div class="screenshot-card">
+            <img src="screen2_wizard.png" alt="Download Wizard"/>
+            <div class="caption">🗜️ Confirmation popup showing record count → click Download ZIP</div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>How to Use</h2>
+    <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+            <h3>Go to any list view</h3>
+            <p>Open Invoices, Sale Orders, Purchase Orders or Inventory Transfers list view.</p>
+        </div>
+    </div>
+    <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+            <h3>Select records</h3>
+            <p>Tick the checkboxes for the records you want to download. Select as many as needed.</p>
+        </div>
+    </div>
+    <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+            <h3>Click Action → Download PDFs as ZIP</h3>
+            <p>Click the <strong>Action</strong> button → select <strong>Download PDFs as ZIP</strong> → click <strong>Download ZIP</strong> in the popup.</p>
+        </div>
+    </div>
+    <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+            <h3>ZIP downloads automatically</h3>
+            <p>A ZIP file downloads to your computer containing all PDFs — ready to email, archive or print.</p>
+        </div>
+    </div>
+</div>
+
+<div class="cta">
+    <h2>Stop Downloading PDFs One by One!</h2>
+    <p style="color:#555; margin-bottom:16px;">Batch download any Odoo documents as ZIP in one click.</p>
+    <a href="mailto:magentodeveloper1993@gmail.com">Get Support</a>
+    <p style="margin-top:16px; font-size:12px; color:#999;">
+        Website: <a href="https://www.technicalrajni.com" style="color:#6c3fc5;">www.technicalrajni.com</a>
+        &nbsp;|&nbsp; Email: magentodeveloper1993@gmail.com
+    </p>
+</div>
+
+</body>
+</html>

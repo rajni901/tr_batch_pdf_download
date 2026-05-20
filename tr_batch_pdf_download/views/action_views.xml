@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Invoice -->
+    <record id="action_batch_pdf_invoice" model="ir.actions.server">
+        <field name="name">Download PDFs as ZIP</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+action = {
+    'type': 'ir.actions.act_window',
+    'name': 'Download PDFs as ZIP',
+    'res_model': 'tr.batch.pdf.wizard',
+    'view_mode': 'form',
+    'target': 'new',
+    'context': {
+        'default_model': 'account.move',
+        'default_res_ids': str(records.ids),
+    },
+}
+        </field>
+    </record>
+
+    <!-- Sale Order -->
+    <record id="action_batch_pdf_sale" model="ir.actions.server">
+        <field name="name">Download PDFs as ZIP</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+action = {
+    'type': 'ir.actions.act_window',
+    'name': 'Download PDFs as ZIP',
+    'res_model': 'tr.batch.pdf.wizard',
+    'view_mode': 'form',
+    'target': 'new',
+    'context': {
+        'default_model': 'sale.order',
+        'default_res_ids': str(records.ids),
+    },
+}
+        </field>
+    </record>
+
+    <!-- Purchase Order -->
+    <record id="action_batch_pdf_purchase" model="ir.actions.server">
+        <field name="name">Download PDFs as ZIP</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+action = {
+    'type': 'ir.actions.act_window',
+    'name': 'Download PDFs as ZIP',
+    'res_model': 'tr.batch.pdf.wizard',
+    'view_mode': 'form',
+    'target': 'new',
+    'context': {
+        'default_model': 'purchase.order',
+        'default_res_ids': str(records.ids),
+    },
+}
+        </field>
+    </record>
+
+    <!-- Delivery / Transfer -->
+    <record id="action_batch_pdf_picking" model="ir.actions.server">
+        <field name="name">Download PDFs as ZIP</field>
+        <field name="model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+action = {
+    'type': 'ir.actions.act_window',
+    'name': 'Download PDFs as ZIP',
+    'res_model': 'tr.batch.pdf.wizard',
+    'view_mode': 'form',
+    'target': 'new',
+    'context': {
+        'default_model': 'stock.picking',
+        'default_res_ids': str(records.ids),
+    },
+}
+        </field>
+    </record>
+
+</odoo>

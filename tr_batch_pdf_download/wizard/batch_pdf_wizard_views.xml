@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_batch_pdf_wizard_form" model="ir.ui.view">
+        <field name="name">tr.batch.pdf.wizard.form</field>
+        <field name="model">tr.batch.pdf.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Batch PDF Download">
+                <div class="o_setting_box" style="padding: 20px;">
+                    <p>
+                        You have selected <strong><field name="record_count" readonly="1"/> record(s)</strong>.
+                        Click <strong>Download ZIP</strong> to generate all PDFs and download as a single ZIP file.
+                    </p>
+                    <p class="text-muted mt-2" style="font-size:12px;">
+                        Note: Large batches (50+ records) may take up to 60 seconds to generate.
+                    </p>
+                </div>
+                <footer>
+                    <button name="action_download" string="Download ZIP"
+                            type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
