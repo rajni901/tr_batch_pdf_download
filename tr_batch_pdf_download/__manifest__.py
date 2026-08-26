@@ -4,7 +4,7 @@
     'category': 'Extra Tools',
     'summary': 'Download multiple Invoices, Sale Orders, Purchase Orders and Delivery Orders as a single ZIP file.',
     'description': """
-Batch PDF Download — by Technical Rajni
+Batch PDF Download — by Vayu Sharma
 ========================================
 Select multiple records and download all PDFs as a single ZIP file in one click.
 
@@ -16,8 +16,8 @@ Features:
 - Auto-named PDF files (Invoice_INV001.pdf, Order_SO001.pdf etc.)
 - Works from list view — select any number of records
     """,
-    'author': 'Technical Rajni',
-    'website': 'https://www.technicalrajni.com',
+    'author': 'Vayu Sharma',
+    'website': '',
     'license': 'OPL-1',
     'depends': ['account', 'sale_management', 'purchase', 'stock'],
     'data': [
